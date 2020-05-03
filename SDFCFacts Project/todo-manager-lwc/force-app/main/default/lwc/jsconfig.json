@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/toDoItem": [
+                "toDoItem/toDoItem.js"
+            ],
+            "c/toDoList": [
+                "toDoList/toDoList.js"
+            ],
+            "c/toDoListItem": [
+                "toDoListItem/toDoListItem.js"
+            ],
+            "c/toDoManager": [
+                "toDoManager/toDoManager.js"
+            ],
+            "c/pubsub": [
+                "pubsub/pubsub.js"
+            ],
+            "c/todoTable": [
+                "todoTable/todoTable.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

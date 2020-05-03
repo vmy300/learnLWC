@@ -1,0 +1,51 @@
+<template>
+
+ <!-- Table using lightning-data tag -->
+ <!-- <div class="slds-card">
+ <h2>ToDo Table</h2>
+ <lightning-datatable data={data} columns={columns} hide-checkbox-column="true" key-field="Id">
+ </lightning-datatable>
+</div> -->
+
+<!-- Table using table tag -->
+<div class="slds-card slds-p-around_medium">
+ <header class="slds-p-around_medium"><strong>ToDO Table</strong></header>
+<table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered slds-table_fixed-layout">
+ <thead>
+  <tr class="slds-line-height_reset">
+   <th class="" scope="col">
+    <div class="slds-truncate" title="Id">Id</div>
+   </th>
+   <th class="" scope="col">
+    <div class="slds-truncate" title="Name">Name</div>
+   </th>
+   <th class="" scope="col">
+    <div class="slds-truncate" title="Status">Status</div>
+   </th>
+ </tr>
+ </thead>
+  <template for:each={data} for:item="d">
+ <tbody key={d.Id}>
+ <tr class="slds-hint-parent">
+  <td data-label="Id">
+   <div class="slds-truncate" title="Name">{d.todoId}</div>
+   </td>
+ <td data-label="Name">
+ <div class="slds-truncate" title="Name">{d.todoName}</div>
+ </td>
+ <td data-label="Status">
+  <div class="slds-truncate" title="Name" >
+   <template if:true={d.done}>
+    Completed
+   </template>
+   <template if:false={d.done}>
+    Yet to complete
+   </template>
+  </div>
+  </td>
+  </tr>
+ </tbody>
+</template>
+ </table>
+</div>
+</template>
